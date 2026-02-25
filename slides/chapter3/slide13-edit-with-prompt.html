@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 13 – Sửa tính năng bằng ngôn ngữ tự nhiên</title>
+    <link rel="stylesheet" href="../css/slide-theme.css">
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="slide-bg"></div>
+        <div class="slide-header">
+            <div class="header-brand"><img src="../assets/logo.png" alt="Logo" class="header-logo"><span class="header-title">Vibe Coding</span><span class="header-year">2026</span></div>
+            <span class="lesson-badge"><span class="num">Bài 13</span> · Chapter 3</span>
+        </div>
+
+        <!-- Title -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">✍️</div>
+                <h1 class="slide-title animate-in animate-in-delay-1">
+                    Sửa tính năng bằng<br><span class="gradient-text">ngôn ngữ tự nhiên</span>
+                </h1>
+                <p class="slide-subtitle animate-in animate-in-delay-2">
+                    Dùng Prompt để thêm/sửa chức năng mà không cần hiểu code
+                </p>
+            </div>
+        </section>
+
+        <!-- Prompt Engineering cơ bản -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">🧠 Prompt Engineering cơ bản</div>
+                <div class="highlight-box animate-in animate-in-delay-1">
+                    <div class="quote-text" style="font-size: 16px;">
+                        <strong>Prompt Engineering</strong> = Nghệ thuật viết yêu cầu để AI hiểu đúng ý bạn và tạo ra
+                        kết quả mong muốn.
+                    </div>
+                </div>
+                <div class="grid-3 animate-in animate-in-delay-2" style="margin-top: 24px;">
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">🎯</div>
+                        <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Rõ ràng</h3>
+                        <p style="font-size: 12px; color: var(--text-secondary);">Nói chính xác muốn gì</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">📍</div>
+                        <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Cụ thể</h3>
+                        <p style="font-size: 12px; color: var(--text-secondary);">Chỉ rõ vị trí, chi tiết</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 28px; margin-bottom: 8px;">📐</div>
+                        <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Có ngữ cảnh</h3>
+                        <p style="font-size: 12px; color: var(--text-secondary);">Mô tả hiện tại + muốn thay đổi gì</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Các loại chỉnh sửa -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">🔧 Các loại chỉnh sửa bằng Prompt</div>
+                <div class="grid-2 animate-in animate-in-delay-1" style="max-width: 800px;">
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <span style="font-size: 24px;">➕</span>
+                            <h3 style="font-size: 15px; font-weight: 700;">Thêm tính năng</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary); font-style: italic;">"Thêm nút dark
+                            mode ở góc trên bên phải"</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <span style="font-size: 24px;">🐛</span>
+                            <h3 style="font-size: 15px; font-weight: 700;">Sửa bug</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary); font-style: italic;">"Nút Submit không
+                            hoạt động, hãy sửa"</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <span style="font-size: 24px;">🎨</span>
+                            <h3 style="font-size: 15px; font-weight: 700;">Thay đổi UI</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary); font-style: italic;">"Đổi màu nền sang
+                            tối, font sang Inter"</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                            <span style="font-size: 24px;">📝</span>
+                            <h3 style="font-size: 15px; font-weight: 700;">Thêm dữ liệu</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary); font-style: italic;">"Thêm 5 sản phẩm
+                            mới vào danh sách"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Template prompt -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">📝 Template Prompt hiệu quả</div>
+                <div class="glass-card animate-in animate-in-delay-1"
+                    style="max-width: 700px; width: 100%; font-family: var(--font-mono); font-size: 14px; line-height: 2;">
+                    <p style="color: var(--text-muted);">// Template:</p>
+                    <p style="color: var(--accent-blue);">
+                        "Hãy <strong style="color: var(--accent-blue);">[hành động]</strong>
+                        ở <strong style="color: var(--accent-blue);">[vị trí]</strong>
+                        với <strong style="color: var(--accent-blue);">[chi tiết]</strong>"
+                    </p>
+                    <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-glass);">
+                        <p style="color: var(--text-muted); font-size: 12px;">// Ví dụ:</p>
+                        <p style="color: var(--accent-green); font-size: 13px;">✅ "Hãy <strong>thêm biểu đồ
+                                tròn</strong> ở <strong>dưới bảng dữ liệu</strong> với <strong>màu xanh dương và
+                                cam</strong>"</p>
+                        <p style="color: var(--accent-blue); font-size: 13px; margin-top: 8px;">❌ "Thêm biểu đồ"
+                            <span style="color: var(--text-muted);">(quá mơ hồ)</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">🛠️</div>
+                <div class="closing-message animate-in animate-in-delay-1">
+                    Dùng prompt <span class="highlight">sửa 3 thứ trên app</span><br>vừa tạo ở bài trước
+                </div>
+                <div class="animate-in animate-in-delay-2" style="margin-top: 24px;">
+                    <span class="tag cyan">→ Chuyển sang Demo</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="page-counter"></div>
+        <div class="nav-hint"><span class="key">←</span><span class="key">→</span><span>hoặc click để chuyển</span>
+        </div>
+    </div>
+    <script src="../js/slide-engine.js"></script>
+</body>
+
+</html>

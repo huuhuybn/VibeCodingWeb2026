@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 17 – Tối ưu website trên điện thoại</title>
+    <link rel="stylesheet" href="../css/slide-theme.css">
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="slide-bg"></div>
+        <div class="slide-header">
+            <div class="header-brand"><img src="../assets/logo.png" alt="Logo" class="header-logo"><span class="header-title">Vibe Coding</span><span class="header-year">2026</span></div>
+            <span class="lesson-badge"><span class="num">Bài 17</span> · Chapter 4</span>
+        </div>
+
+        <!-- Title -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">📱</div>
+                <h1 class="slide-title animate-in animate-in-delay-1">
+                    Tối ưu website<br>trên <span class="gradient-text">điện thoại</span>
+                </h1>
+                <p class="slide-subtitle animate-in animate-in-delay-2">
+                    Responsive design – 70%+ người dùng truy cập từ mobile
+                </p>
+            </div>
+        </section>
+
+        <!-- Tại sao quan trọng? -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">📊 Tại sao Responsive quan trọng?</div>
+                <div class="grid-3 animate-in animate-in-delay-1">
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 48px; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">
+                            70%+</div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Traffic từ mobile tại Việt Nam</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div
+                            style="font-size: 48px; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">
+                            53%</div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Người dùng rời trang nếu load > 3 giây
+                            trên mobile</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div
+                            style="font-size: 48px; font-weight: 800; color: var(--accent-blue); margin-bottom: 8px;">
+                            #1</div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Google ưu tiên mobile-friendly trong
+                            kết quả tìm kiếm</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vấn đề phổ biến -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">😰 Các vấn đề phổ biến trên Mobile</div>
+                <div class="grid-2 animate-in animate-in-delay-1" style="max-width: 800px;">
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                            <span style="font-size: 20px;">🔤</span>
+                            <h3 style="font-size: 14px; font-weight: 700;">Text quá nhỏ</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Phải pinch-to-zoom mới đọc được → UX
+                            rất kém</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                            <span style="font-size: 20px;">👆</span>
+                            <h3 style="font-size: 14px; font-weight: 700;">Nút bấm quá nhỏ</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Ngón tay bấm không trúng → người dùng
+                            bực bội</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                            <span style="font-size: 20px;">📐</span>
+                            <h3 style="font-size: 14px; font-weight: 700;">Layout bể</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Nội dung tràn ra ngoài màn hình,
+                            scroll ngang</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                            <span style="font-size: 20px;">🐌</span>
+                            <h3 style="font-size: 14px; font-weight: 700;">Load chậm</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Ảnh quá nặng, nhiều script → chờ mãi
+                            trên 4G</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cách test -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">🔍 Cách test Responsive</div>
+                <div class="numbered-list animate-in animate-in-delay-1">
+                    <li><strong>DevTools (F12)</strong> – Bật chế độ mobile trong trình duyệt, chọn iPhone/Samsung</li>
+                    <li><strong>Thử trên điện thoại thật</strong> – Mở link trên mobile, test thao tác thật</li>
+                    <li><strong>Resize cửa sổ trình duyệt</strong> – Kéo nhỏ dần, xem layout có bể không</li>
+                    <li><strong>Google Mobile Test</strong> – search.google.com/test/mobile-friendly</li>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompt sửa responsive -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">✍️ Prompt sửa Responsive</div>
+                <div style="display: flex; flex-direction: column; gap: 12px; max-width: 700px; width: 100%;"
+                    class="animate-in animate-in-delay-1">
+                    <div class="glass-card" style="padding: 16px 24px; border-left: 3px solid var(--accent-blue);">
+                        <p style="font-size: 14px; font-family: var(--font-mono); color: var(--accent-blue);">"Làm cho
+                            trang này hiển thị tốt trên mobile, font tối thiểu 16px"</p>
+                    </div>
+                    <div class="glass-card" style="padding: 16px 24px; border-left: 3px solid var(--accent-blue);">
+                        <p style="font-size: 14px; font-family: var(--font-mono); color: var(--accent-blue);">"Chuyển
+                            grid 3 cột thành 1 cột trên màn hình nhỏ hơn 768px"</p>
+                    </div>
+                    <div class="glass-card" style="padding: 16px 24px; border-left: 3px solid var(--accent-blue);">
+                        <p style="font-size: 14px; font-family: var(--font-mono); color: var(--accent-blue);">"Tăng
+                            kích thước nút bấm lên 48px và thêm padding cho mobile"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">📱</div>
+                <div class="closing-message animate-in animate-in-delay-1">
+                    Kiểm tra và <span class="highlight">sửa responsive</span><br>cho website của bạn
+                </div>
+                <div class="animate-in animate-in-delay-2" style="margin-top: 24px;">
+                    <span class="tag cyan">→ Chuyển sang Demo</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="page-counter"></div>
+        <div class="nav-hint"><span class="key">←</span><span class="key">→</span><span>hoặc click để chuyển</span>
+        </div>
+    </div>
+    <script src="../js/slide-engine.js"></script>
+</body>
+
+</html>

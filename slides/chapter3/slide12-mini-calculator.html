@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 12 – Tạo Mini Web App tính toán</title>
+    <link rel="stylesheet" href="../css/slide-theme.css">
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="slide-bg"></div>
+        <div class="slide-header">
+            <div class="header-brand"><img src="../assets/logo.png" alt="Logo" class="header-logo"><span class="header-title">Vibe Coding</span><span class="header-year">2026</span></div>
+            <span class="lesson-badge"><span class="num">Bài 12</span> · Chapter 3</span>
+        </div>
+
+        <!-- Title -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">🧮</div>
+                <h1 class="slide-title animate-in animate-in-delay-1">
+                    Tạo <span class="gradient-text">Mini Web App</span><br>tính toán
+                </h1>
+                <p class="slide-subtitle animate-in animate-in-delay-2">
+                    Công cụ tính toán phục vụ công việc – không cần biết code
+                </p>
+            </div>
+        </section>
+
+        <!-- Ví dụ thực tế -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">💡 Ví dụ ứng dụng thực tế</div>
+                <div class="grid-3 animate-in animate-in-delay-1">
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">🏦</div>
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">Tính lãi suất vay</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Nhập số tiền, lãi suất, kỳ hạn → Xem
+                            trả hàng tháng</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">💰</div>
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">Chi phí dự án</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Nhập các hạng mục → Tính tổng, phân bổ
+                            ngân sách</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">🏷️</div>
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">Giá bán sản phẩm</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Giá vốn + margin → Giá bán, lợi nhuận
+                            dự kiến</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cấu trúc app -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">📋 Cấu trúc Mini Calculator App</div>
+                <div class="glass-card animate-in animate-in-delay-1" style="max-width: 500px; width: 100%;">
+                    <h3
+                        style="text-align: center; font-size: 18px; font-weight: 700; margin-bottom: 20px; color: var(--accent-blue);">
+                        🏦 Tính lãi suất kép</h3>
+
+                    <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
+                        <div
+                            style="background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: 10px; padding: 12px 16px;">
+                            <label
+                                style="font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 4px;">Số
+                                tiền gốc (VNĐ)</label>
+                            <span style="font-size: 16px; font-weight: 600;">100,000,000</span>
+                        </div>
+                        <div
+                            style="background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: 10px; padding: 12px 16px;">
+                            <label
+                                style="font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 4px;">Lãi
+                                suất (%/năm)</label>
+                            <span style="font-size: 16px; font-weight: 600;">8.5</span>
+                        </div>
+                        <div
+                            style="background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: 10px; padding: 12px 16px;">
+                            <label
+                                style="font-size: 11px; color: var(--text-muted); display: block; margin-bottom: 4px;">Thời
+                                gian (năm)</label>
+                            <span style="font-size: 16px; font-weight: 600;">5</span>
+                        </div>
+                    </div>
+
+                    <div
+                        style="background: var(--accent-blue-bg); border: 1px solid var(--accent-blue-border); border-radius: 12px; padding: 16px; text-align: center;">
+                        <p style="font-size: 12px; color: var(--text-muted); margin-bottom: 4px;">Tổng tiền nhận được
+                        </p>
+                        <p style="font-size: 24px; font-weight: 800; color: var(--accent-blue);">150,366,026 VNĐ</p>
+                        <p style="font-size: 12px; color: var(--accent-green); margin-top: 4px;">+ 50,366,026 VNĐ lãi
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompt -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">✍️ Cách mô tả cho AI</div>
+                <div class="glass-card animate-in animate-in-delay-1"
+                    style="max-width: 700px; width: 100%; font-family: var(--font-mono); font-size: 14px; line-height: 1.8; color: var(--accent-blue); background: var(--accent-blue-bg);">
+                    <p>"Tạo web app tính lãi suất kép.</p>
+                    <p style="margin-top: 8px;"><strong style="color: var(--accent-blue);">Input:</strong> Số tiền
+                        gốc, lãi suất/năm, số năm.</p>
+                    <p style="margin-top: 8px;"><strong style="color: var(--accent-blue);">Output:</strong> Tổng tiền
+                        nhận được, tiền lãi, bảng chi tiết theo từng năm.</p>
+                    <p style="margin-top: 8px;">Giao diện đẹp, dùng biểu đồ cột hiển thị tăng trưởng số tiền."</p>
+                </div>
+                <p class="section-text animate-in animate-in-delay-2" style="text-align: center; margin-top: 16px;">
+                    💡 Mô tả rõ Input → Công thức → Output → Giao diện
+                </p>
+            </div>
+        </section>
+
+        <!-- Closing -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">🧮</div>
+                <div class="closing-message animate-in animate-in-delay-1">
+                    Tạo <span class="highlight">app tính lãi suất kép</span><br>hoàn chỉnh bằng AI
+                </div>
+                <div class="animate-in animate-in-delay-2" style="margin-top: 24px;">
+                    <span class="tag cyan">→ Chuyển sang Demo</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="page-counter"></div>
+        <div class="nav-hint"><span class="key">←</span><span class="key">→</span><span>hoặc click để chuyển</span>
+        </div>
+    </div>
+    <script src="../js/slide-engine.js"></script>
+</body>
+
+</html>

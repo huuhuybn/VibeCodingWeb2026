@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5 – Tạo Web CV cá nhân bằng AI</title>
+    <link rel="stylesheet" href="../css/slide-theme.css">
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="slide-bg"></div>
+        <div class="slide-header">
+            <div class="header-brand"><img src="../assets/logo.png" alt="Logo" class="header-logo"><span class="header-title">Vibe Coding</span><span class="header-year">2026</span></div>
+            <span class="lesson-badge"><span class="num">Bài 05</span> · Chapter 2</span>
+        </div>
+
+        <!-- Title -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">📄</div>
+                <h1 class="slide-title animate-in animate-in-delay-1">
+                    Tạo <span class="gradient-text">Web CV cá nhân</span><br>bằng AI
+                </h1>
+                <p class="slide-subtitle animate-in animate-in-delay-2">
+                    Từ nội dung văn bản đến CV online chuyên nghiệp trong 5 phút
+                </p>
+            </div>
+        </section>
+
+        <!-- Tại sao cần CV online? -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">🤔 Tại sao cần CV online?</div>
+                <div class="grid-3 animate-in animate-in-delay-1">
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">🌐</div>
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">Chia sẻ dễ dàng</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Gửi link thay vì file PDF đính kèm
+                            email</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">✨</div>
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">Ấn tượng hơn</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">CV website trông chuyên nghiệp hơn
+                            file Word</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">🔄</div>
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">Luôn cập nhật</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Sửa nội dung, nhà tuyển dụng luôn thấy
+                            bản mới nhất</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cấu trúc CV -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">📋 Cấu trúc CV website chuẩn</div>
+                <div class="grid-2 animate-in animate-in-delay-1" style="max-width: 800px;">
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                            <span style="font-size: 24px;">👤</span>
+                            <h3 style="font-size: 15px; font-weight: 700;">Header / Hero</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Ảnh đại diện, tên, chức danh, tagline
+                        </p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                            <span style="font-size: 24px;">📝</span>
+                            <h3 style="font-size: 15px; font-weight: 700;">About Me</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Giới thiệu bản thân, mục tiêu nghề
+                            nghiệp</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                            <span style="font-size: 24px;">💼</span>
+                            <h3 style="font-size: 15px; font-weight: 700;">Experience</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Kinh nghiệm làm việc, dự án nổi bật
+                        </p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                            <span style="font-size: 24px;">🎯</span>
+                            <h3 style="font-size: 15px; font-weight: 700;">Skills</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Kỹ năng với thanh progress hoặc tag
+                        </p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                            <span style="font-size: 24px;">🎓</span>
+                            <h3 style="font-size: 15px; font-weight: 700;">Education</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Trường, ngành học, chứng chỉ</p>
+                    </div>
+                    <div class="glass-card">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px;">
+                            <span style="font-size: 24px;">📧</span>
+                            <h3 style="font-size: 15px; font-weight: 700;">Contact</h3>
+                        </div>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Email, phone, LinkedIn, GitHub</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompt mẫu -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">✍️ Prompt mẫu để tạo CV</div>
+                <div class="glass-card animate-in animate-in-delay-1"
+                    style="max-width: 800px; width: 100%; font-family: var(--font-mono); font-size: 14px; line-height: 1.8; color: var(--accent-blue); background: var(--accent-blue-bg);">
+                    <p>"Tạo một website CV cá nhân cho <strong style="color: var(--accent-blue);">[tên bạn]</strong>,
+                        chức danh <strong style="color: var(--accent-blue);">[vị trí]</strong>.</p>
+                    <p style="margin-top: 8px;">Gồm các phần: Header với ảnh đại diện, About Me, Skills (dạng tag),
+                        Experience (timeline), Education, và Contact.</p>
+                    <p style="margin-top: 8px;">Phong cách hiện đại, tông màu <strong
+                            style="color: var(--accent-blue);">[xanh navy / tím / tối]</strong>, responsive trên
+                        mobile."</p>
+                </div>
+                <p class="section-text animate-in animate-in-delay-2" style="text-align: center; margin-top: 16px;">
+                    💡 Càng mô tả chi tiết, AI tạo càng chính xác!
+                </p>
+            </div>
+        </section>
+
+        <!-- Closing -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">🎉</div>
+                <div class="closing-message animate-in animate-in-delay-1">
+                    Sau demo, bạn sẽ có<br><span class="highlight">CV online trong 5 phút!</span>
+                </div>
+                <div class="animate-in animate-in-delay-2" style="margin-top: 24px;">
+                    <span class="tag cyan">→ Chuyển sang Demo</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="page-counter"></div>
+        <div class="nav-hint"><span class="key">←</span><span class="key">→</span><span>hoặc click để chuyển</span>
+        </div>
+    </div>
+    <script src="../js/slide-engine.js"></script>
+</body>
+
+</html>

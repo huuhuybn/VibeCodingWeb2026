@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vibe Coding – Demo Slides</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            color: #1a1a2e;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 48px 20px 32px;
+        }
+
+        .hero-logo {
+            height: 48px;
+            margin-bottom: 16px;
+        }
+
+        .hero h1 {
+            font-size: clamp(26px, 5vw, 40px);
+            font-weight: 800;
+            color: #1a4b8c;
+            margin-bottom: 8px;
+        }
+
+        .hero p {
+            font-size: 16px;
+            color: #4a4a60;
+        }
+
+        .hero .year-badge {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            color: #1a4b8c;
+            background: rgba(26, 75, 140, 0.08);
+            border: 1px solid rgba(26, 75, 140, 0.2);
+            border-radius: 6px;
+            padding: 3px 10px;
+            margin-left: 6px;
+        }
+
+        .chapter {
+            margin-bottom: 24px;
+        }
+
+        .chapter-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 24px;
+            background: #f4f6f9;
+            border: 1px solid #d0d5dd;
+            border-radius: 14px 14px 0 0;
+            border-bottom: 2px solid #1a4b8c;
+        }
+
+        .chapter-num {
+            width: 34px;
+            height: 34px;
+            background: #1a4b8c;
+            border-radius: 9px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 800;
+            color: #fff;
+            flex-shrink: 0;
+        }
+
+        .chapter-header h2 {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .slide-list {
+            list-style: none;
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-top: none;
+            border-radius: 0 0 14px 14px;
+            overflow: hidden;
+        }
+
+        .slide-list li {
+            border-bottom: 1px solid #f0f2f5;
+        }
+
+        .slide-list li:last-child {
+            border-bottom: none;
+        }
+
+        .slide-list a {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px 24px;
+            color: #1a1a2e;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .slide-list a:hover {
+            background: rgba(26, 75, 140, 0.04);
+            padding-left: 30px;
+        }
+
+        .slide-num {
+            width: 28px;
+            height: 28px;
+            background: #f4f6f9;
+            border: 1px solid #d0d5dd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+            color: #8a8aa0;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+
+        .slide-list a:hover .slide-num {
+            background: rgba(26, 75, 140, 0.1);
+            border-color: rgba(26, 75, 140, 0.3);
+            color: #1a4b8c;
+        }
+
+        .slide-emoji {
+            font-size: 22px;
+            flex-shrink: 0;
+        }
+
+        .slide-info {
+            flex: 1;
+        }
+
+        .slide-title-text {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .slide-desc {
+            font-size: 12px;
+            color: #8a8aa0;
+        }
+
+        .slide-arrow {
+            font-size: 16px;
+            color: #d0d5dd;
+            transition: all 0.2s ease;
+        }
+
+        .slide-list a:hover .slide-arrow {
+            color: #1a4b8c;
+            transform: translateX(4px);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            color: #8a8aa0;
+            font-size: 13px;
+        }
+
+        .footer a {
+            color: #1a4b8c;
+            text-decoration: none;
+        }
+
+        @media (max-width: 600px) {
+            .slide-list a {
+                padding: 12px 16px;
+                gap: 10px;
+            }
+
+            .slide-list a:hover {
+                padding-left: 20px;
+            }
+
+            .chapter-header {
+                padding: 12px 16px;
+            }
+
+            .slide-desc {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hero">
+            <img src="Picture1.png" alt="Vibe Coding Logo" class="hero-logo">
+            <h1>Vibe Coding – Demo Slides <span class="year-badge">2026</span></h1>
+            <p>Tạo sản phẩm IT bằng AI · 19 bài học · 5 chương</p>
+        </div>
+
+        <!-- Chapter 1 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-num">1</div>
+                <h2>Nền tảng Vibe Coding</h2>
+            </div>
+            <ul class="slide-list">
+                <li><a href="slides/chapter1/slide01-what-is-vibe-coding.html">
+                        <span class="slide-num">01</span><span class="slide-emoji">⚡</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Vibe Coding là gì trong kỷ nguyên AI?</div>
+                            <div class="slide-desc">Định nghĩa, workflow, công cụ phổ biến</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter1/slide02-traditional-vs-ai.html">
+                        <span class="slide-num">02</span><span class="slide-emoji">⚖️</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Traditional Coding vs AI Product Creation</div>
+                            <div class="slide-desc">So sánh thời gian, kỹ năng, chi phí</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter1/slide03-it-product-components.html">
+                        <span class="slide-num">03</span><span class="slide-emoji">🏗️</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Các thành phần của một sản phẩm IT</div>
+                            <div class="slide-desc">Idea → Structure → UI → UX → Deploy → Improve</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter1/slide04-nocode-vs-lowcode.html">
+                        <span class="slide-num">04</span><span class="slide-emoji">🔀</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">No-code vs Low-code</div>
+                            <div class="slide-desc">Phân biệt, khi nào dùng, nền tảng phổ biến</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+            </ul>
+        </div>
+
+        <!-- Chapter 2 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-num">2</div>
+                <h2>Tạo Website tĩnh bằng AI</h2>
+            </div>
+            <ul class="slide-list">
+                <li><a href="slides/chapter2/slide05-cv-website.html">
+                        <span class="slide-num">05</span><span class="slide-emoji">📄</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Tạo CV Website cá nhân</div>
+                            <div class="slide-desc">Cấu trúc CV online, prompt mẫu</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter2/slide06-bio-link.html">
+                        <span class="slide-num">06</span><span class="slide-emoji">🔗</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Bio Link / Digital Profile</div>
+                            <div class="slide-desc">Thay thế Linktree, QR code</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter2/slide07-business-website.html">
+                        <span class="slide-num">07</span><span class="slide-emoji">🏢</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Website giới thiệu doanh nghiệp</div>
+                            <div class="slide-desc">Cấu trúc chuẩn cho SME</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter2/slide08-landing-page.html">
+                        <span class="slide-num">08</span><span class="slide-emoji">🎯</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Landing Page sản phẩm</div>
+                            <div class="slide-desc">Hero → Benefits → Testimonials → CTA</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter2/slide09-digital-menu.html">
+                        <span class="slide-num">09</span><span class="slide-emoji">🍽️</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Digital Menu cho F&B</div>
+                            <div class="slide-desc">Menu QR code, mobile-first</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+            </ul>
+        </div>
+
+        <!-- Chapter 3 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-num">3</div>
+                <h2>AI Tools & Mini Apps</h2>
+            </div>
+            <ul class="slide-list">
+                <li><a href="slides/chapter3/slide10-brd-generator.html">
+                        <span class="slide-num">10</span><span class="slide-emoji">📋</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Tạo Tool sinh BRD bằng AI</div>
+                            <div class="slide-desc">Business Requirements Document tự động</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter3/slide11-data-dashboard.html">
+                        <span class="slide-num">11</span><span class="slide-emoji">📊</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Tạo Dashboard dữ liệu</div>
+                            <div class="slide-desc">Biến Excel thành biểu đồ trực quan</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter3/slide12-mini-calculator.html">
+                        <span class="slide-num">12</span><span class="slide-emoji">🧮</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Mini Web App tính toán</div>
+                            <div class="slide-desc">Công cụ tính lãi suất, chi phí</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter3/slide13-edit-with-prompt.html">
+                        <span class="slide-num">13</span><span class="slide-emoji">✍️</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Sửa tính năng bằng Prompt</div>
+                            <div class="slide-desc">Prompt Engineering, template hiệu quả</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+            </ul>
+        </div>
+
+        <!-- Chapter 4 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-num">4</div>
+                <h2>Nâng cấp UI/UX</h2>
+            </div>
+            <ul class="slide-list">
+                <li><a href="slides/chapter4/slide15-clean-ui-design.html">
+                        <span class="slide-num">15</span><span class="slide-emoji">🎨</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Thiết kế giao diện đẹp</div>
+                            <div class="slide-desc">4 nguyên tắc, before/after, từ khóa prompt</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter4/slide16-layout-color-prompt.html">
+                        <span class="slide-num">16</span><span class="slide-emoji">🌈</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Cải thiện bố cục & màu sắc</div>
+                            <div class="slide-desc">Color theory, font pairing, spacing</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter4/slide17-mobile-responsive.html">
+                        <span class="slide-num">17</span><span class="slide-emoji">📱</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Tối ưu website trên điện thoại</div>
+                            <div class="slide-desc">Responsive design, testing, prompt sửa</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter4/slide18-ux-checklist.html">
+                        <span class="slide-num">18</span><span class="slide-emoji">✅</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Checklist UX trước khi xuất bản</div>
+                            <div class="slide-desc">5 bước kiểm tra, công cụ miễn phí</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+            </ul>
+        </div>
+
+        <!-- Chapter 5 -->
+        <div class="chapter">
+            <div class="chapter-header">
+                <div class="chapter-num">5</div>
+                <h2>Deploy & Tổng kết</h2>
+            </div>
+            <ul class="slide-list">
+                <li><a href="slides/chapter5/slide19-deploy-website.html">
+                        <span class="slide-num">19</span><span class="slide-emoji">🌐</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Đưa Website lên Internet</div>
+                            <div class="slide-desc">Free hosting, deploy workflow</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+                <li><a href="slides/chapter5/slide20-e2e-workflow.html">
+                        <span class="slide-num">20</span><span class="slide-emoji">🎓</span>
+                        <span class="slide-info">
+                            <div class="slide-title-text">Quy trình hoàn chỉnh E2E</div>
+                            <div class="slide-desc">6 bước, tổng kết khóa học, con đường phát triển</div>
+                        </span>
+                        <span class="slide-arrow">→</span>
+                    </a></li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>Vibe Coding – Tạo sản phẩm IT bằng AI · <a
+                    href="https://github.com/huuhuybn/VibeCodingWeb2026">GitHub</a></p>
+        </div>
+    </div>
+</body>
+
+</html>

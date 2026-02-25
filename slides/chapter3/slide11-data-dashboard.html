@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 11 – Tạo Dashboard dữ liệu đơn giản</title>
+    <link rel="stylesheet" href="../css/slide-theme.css">
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="slide-bg"></div>
+        <div class="slide-header">
+            <div class="header-brand"><img src="../assets/logo.png" alt="Logo" class="header-logo"><span class="header-title">Vibe Coding</span><span class="header-year">2026</span></div>
+            <span class="lesson-badge"><span class="num">Bài 11</span> · Chapter 3</span>
+        </div>
+
+        <!-- Title -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">📊</div>
+                <h1 class="slide-title animate-in animate-in-delay-1">
+                    Tạo <span class="gradient-text">Dashboard</span><br>dữ liệu đơn giản
+                </h1>
+                <p class="slide-subtitle animate-in animate-in-delay-2">
+                    Biến bảng số liệu thành biểu đồ trực quan bằng AI
+                </p>
+            </div>
+        </section>
+
+        <!-- Dashboard là gì? -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">💡 Dashboard là gì?</div>
+                <div class="content-split animate-in animate-in-delay-1" style="max-width: 900px;">
+                    <div class="glass-card" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.1);">
+                        <div style="font-size: 48px; margin-bottom: 12px;">📋</div>
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">Bảng Excel</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Dữ liệu thô, khó đọc, không trực quan
+                        </p>
+                    </div>
+                    <div style="font-size: 32px; color: var(--accent-blue);">→</div>
+                    <div class="glass-card" style="flex: 1; text-align: center; border-color: var(--accent-blue-border);">
+                        <div style="font-size: 48px; margin-bottom: 12px;">📊</div>
+                        <h3 style="font-size: 15px; font-weight: 700; color: var(--accent-blue); margin-bottom: 8px;">
+                            Dashboard</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Biểu đồ đẹp, dễ hiểu, ra quyết định
+                            nhanh</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Các loại biểu đồ -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">📈 Các loại biểu đồ phổ biến</div>
+                <div class="grid-4 animate-in animate-in-delay-1">
+                    <div class="glass-card" style="text-align: center; padding: 20px 16px;">
+                        <div style="font-size: 36px; margin-bottom: 8px;">📊</div>
+                        <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Bar Chart</h3>
+                        <p style="font-size: 12px; color: var(--text-muted);">So sánh số liệu</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center; padding: 20px 16px;">
+                        <div style="font-size: 36px; margin-bottom: 8px;">📈</div>
+                        <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Line Chart</h3>
+                        <p style="font-size: 12px; color: var(--text-muted);">Xu hướng theo thời gian</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center; padding: 20px 16px;">
+                        <div style="font-size: 36px; margin-bottom: 8px;">🥧</div>
+                        <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Pie Chart</h3>
+                        <p style="font-size: 12px; color: var(--text-muted);">Tỷ lệ phần trăm</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center; padding: 20px 16px;">
+                        <div style="font-size: 36px; margin-bottom: 8px;">🔢</div>
+                        <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">KPI Cards</h3>
+                        <p style="font-size: 12px; color: var(--text-muted);">Số liệu nổi bật</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quy trình -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">🔄 Từ Excel → Dashboard</div>
+                <div class="steps-flow animate-in animate-in-delay-1">
+                    <div class="step-item">
+                        <span class="step-num">Bước 1</span>
+                        <span style="font-size: 24px;">📋</span>
+                        <span class="step-label">Chuẩn bị<br>dữ liệu</span>
+                    </div>
+                    <span class="step-arrow">→</span>
+                    <div class="step-item">
+                        <span class="step-num">Bước 2</span>
+                        <span style="font-size: 24px;">✍️</span>
+                        <span class="step-label">Mô tả cho AI<br>muốn hiển thị gì</span>
+                    </div>
+                    <span class="step-arrow">→</span>
+                    <div class="step-item">
+                        <span class="step-num">Bước 3</span>
+                        <span style="font-size: 24px;">🤖</span>
+                        <span class="step-label">AI tạo<br>dashboard</span>
+                    </div>
+                    <span class="step-arrow">→</span>
+                    <div class="step-item">
+                        <span class="step-num">Bước 4</span>
+                        <span style="font-size: 24px;">🎨</span>
+                        <span class="step-label">Chỉnh màu<br>& bố cục</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">📊</div>
+                <div class="closing-message animate-in animate-in-delay-1">
+                    Biến <span class="highlight">bảng doanh thu thành dashboard đẹp</span><br>trong vài phút
+                </div>
+                <div class="animate-in animate-in-delay-2" style="margin-top: 24px;">
+                    <span class="tag cyan">→ Chuyển sang Demo</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="page-counter"></div>
+        <div class="nav-hint"><span class="key">←</span><span class="key">→</span><span>hoặc click để chuyển</span>
+        </div>
+    </div>
+    <script src="../js/slide-engine.js"></script>
+</body>
+
+</html>

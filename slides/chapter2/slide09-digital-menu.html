@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 9 – Thiết kế Menu điện tử cho quán</title>
+    <link rel="stylesheet" href="../css/slide-theme.css">
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="slide-bg"></div>
+        <div class="slide-header">
+            <div class="header-brand"><img src="../assets/logo.png" alt="Logo" class="header-logo"><span class="header-title">Vibe Coding</span><span class="header-year">2026</span></div>
+            <span class="lesson-badge"><span class="num">Bài 09</span> · Chapter 2</span>
+        </div>
+
+        <!-- Title -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">☕</div>
+                <h1 class="slide-title animate-in animate-in-delay-1">
+                    Thiết kế <span class="gradient-text">Menu điện tử</span><br>cho quán
+                </h1>
+                <p class="slide-subtitle animate-in animate-in-delay-2">
+                    Menu online đẹp, hiển thị tốt trên điện thoại, cập nhật tức thì
+                </p>
+            </div>
+        </section>
+
+        <!-- Xu hướng -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">📱 Xu hướng Menu QR Code</div>
+                <div class="grid-3 animate-in animate-in-delay-1">
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">💰</div>
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">Tiết kiệm chi phí</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Không cần in menu giấy, đổi giá không
+                            tốn tiền</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">🔄</div>
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">Cập nhật tức thì</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Hết món? Thêm món mới? Sửa online ngay
+                        </p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="font-size: 36px; margin-bottom: 12px;">✨</div>
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 8px;">Hiện đại & vệ sinh</h3>
+                        <p style="font-size: 13px; color: var(--text-secondary);">Khách scan QR trên bàn, không cần menu
+                            chung</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cấu trúc menu -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">📋 Cấu trúc Menu điện tử</div>
+                <div class="glass-card animate-in animate-in-delay-1" style="max-width: 500px; width: 100%;">
+                    <div style="text-align: center; margin-bottom: 20px;">
+                        <h3 style="font-size: 20px; font-weight: 800;">☕ BREW COFFEE</h3>
+                        <p style="font-size: 12px; color: var(--text-muted);">Fresh & Delicious since 2024</p>
+                    </div>
+
+                    <div style="margin-bottom: 16px;">
+                        <h4
+                            style="font-size: 13px; font-weight: 700; color: var(--accent-blue); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">
+                            ☕ Cà phê</h4>
+                        <div
+                            style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border-glass);">
+                            <div>
+                                <strong style="font-size: 14px;">Cà phê sữa đá</strong>
+                                <p style="font-size: 11px; color: var(--text-muted);">Robusta, sữa đặc, đá</p>
+                            </div>
+                            <span style="font-size: 14px; font-weight: 700; color: var(--accent-blue);">29K</span>
+                        </div>
+                        <div
+                            style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border-glass);">
+                            <div>
+                                <strong style="font-size: 14px;">Latte</strong>
+                                <p style="font-size: 11px; color: var(--text-muted);">Espresso, sữa tươi, foam</p>
+                            </div>
+                            <span style="font-size: 14px; font-weight: 700; color: var(--accent-blue);">45K</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4
+                            style="font-size: 13px; font-weight: 700; color: var(--accent-blue); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px;">
+                            🧋 Trà sữa</h4>
+                        <div
+                            style="display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid var(--border-glass);">
+                            <div>
+                                <strong style="font-size: 14px;">Trà sữa trân châu</strong>
+                                <p style="font-size: 11px; color: var(--text-muted);">Trà đen, sữa tươi, trân châu đường
+                                    đen</p>
+                            </div>
+                            <span style="font-size: 14px; font-weight: 700; color: var(--accent-blue);">39K</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mobile-first -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">📱 Thiết kế Mobile-first</div>
+                <div class="grid-2 animate-in animate-in-delay-1" style="max-width: 800px;">
+                    <div class="glass-card">
+                        <h3 style="font-size: 15px; font-weight: 700; margin-bottom: 12px; color: var(--accent-blue);">✅
+                            Cần có</h3>
+                        <ul class="bullet-list" style="font-size: 14px;">
+                            <li>Font size đủ lớn (16px+)</li>
+                            <li>Ảnh món ăn chất lượng</li>
+                            <li>Phân nhóm rõ ràng</li>
+                            <li>Giá nổi bật, dễ đọc</li>
+                            <li>Load nhanh trên 4G</li>
+                        </ul>
+                    </div>
+                    <div class="glass-card">
+                        <h3
+                            style="font-size: 15px; font-weight: 700; margin-bottom: 12px; color: var(--accent-blue);">
+                            ❌ Tránh</h3>
+                        <ul class="bullet-list" style="font-size: 14px;">
+                            <li>Ảnh quá nặng, load chậm</li>
+                            <li>Text quá nhỏ trên mobile</li>
+                            <li>Không phân nhóm món</li>
+                            <li>Layout bể trên màn hình hẹp</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">🍽️</div>
+                <div class="closing-message animate-in animate-in-delay-1">
+                    Tạo <span class="highlight">menu quán cafe đẹp</span>,<br>scannable bằng QR
+                </div>
+                <div class="animate-in animate-in-delay-2" style="margin-top: 24px;">
+                    <span class="tag cyan">→ Chuyển sang Demo</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="page-counter"></div>
+        <div class="nav-hint"><span class="key">←</span><span class="key">→</span><span>hoặc click để chuyển</span>
+        </div>
+    </div>
+    <script src="../js/slide-engine.js"></script>
+</body>
+
+</html>

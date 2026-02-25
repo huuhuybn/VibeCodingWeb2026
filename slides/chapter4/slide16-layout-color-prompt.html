@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 16 – Cải thiện bố cục và màu sắc bằng Prompt</title>
+    <link rel="stylesheet" href="../css/slide-theme.css">
+</head>
+
+<body>
+    <div class="slide-container">
+        <div class="slide-bg"></div>
+        <div class="slide-header">
+            <div class="header-brand"><img src="../assets/logo.png" alt="Logo" class="header-logo"><span class="header-title">Vibe Coding</span><span class="header-year">2026</span></div>
+            <span class="lesson-badge"><span class="num">Bài 16</span> · Chapter 4</span>
+        </div>
+
+        <!-- Title -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">🎨</div>
+                <h1 class="slide-title animate-in animate-in-delay-1">
+                    Cải thiện <span class="gradient-text">bố cục & màu sắc</span><br>bằng Prompt
+                </h1>
+                <p class="slide-subtitle animate-in animate-in-delay-2">
+                    Color theory, font pairing, spacing – điều chỉnh bằng ngôn ngữ tự nhiên
+                </p>
+            </div>
+        </section>
+
+        <!-- Color Theory -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">🌈 Color Theory cơ bản</div>
+                <div class="grid-3 animate-in animate-in-delay-1">
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 6px; margin-bottom: 12px;">
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #3b82f6;"></div>
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #f97316;"></div>
+                        </div>
+                        <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Complementary</h3>
+                        <p style="font-size: 12px; color: var(--text-secondary);">Màu đối lập – nổi bật, mạnh mẽ</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 6px; margin-bottom: 12px;">
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #3b82f6;"></div>
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #6366f1;"></div>
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #8b5cf6;"></div>
+                        </div>
+                        <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Analogous</h3>
+                        <p style="font-size: 12px; color: var(--text-secondary);">Màu liền kề – hài hòa, dễ chịu</p>
+                    </div>
+                    <div class="glass-card" style="text-align: center;">
+                        <div style="display: flex; justify-content: center; gap: 6px; margin-bottom: 12px;">
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #1e3a5f;"></div>
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #3b82f6;"></div>
+                            <div style="width: 32px; height: 32px; border-radius: 50%; background: #93c5fd;"></div>
+                        </div>
+                        <h3 style="font-size: 14px; font-weight: 700; margin-bottom: 4px;">Monochromatic</h3>
+                        <p style="font-size: 12px; color: var(--text-secondary);">Cùng hue, khác sáng tối – thanh lịch
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Font Pairing -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">🔤 Font Pairing</div>
+                <div class="grid-2 animate-in animate-in-delay-1" style="max-width: 800px;">
+                    <div class="glass-card">
+                        <h3 style="font-size: 14px; color: var(--accent-blue); margin-bottom: 16px;">Heading Font</h3>
+                        <p style="font-size: 28px; font-weight: 800; margin-bottom: 4px;">Inter Bold</p>
+                        <p style="font-size: 13px; color: var(--text-muted);">Nổi bật, dễ đọc ở kích thước lớn</p>
+                        <div style="margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap;">
+                            <span class="tag cyan" style="font-size: 11px;">Montserrat</span>
+                            <span class="tag cyan" style="font-size: 11px;">Outfit</span>
+                            <span class="tag cyan" style="font-size: 11px;">Poppins</span>
+                        </div>
+                    </div>
+                    <div class="glass-card">
+                        <h3 style="font-size: 14px; color: var(--accent-blue); margin-bottom: 16px;">Body Font</h3>
+                        <p style="font-size: 16px; font-weight: 400; margin-bottom: 4px; line-height: 1.6;">Inter
+                            Regular – dễ đọc ở size nhỏ, nội dung dài</p>
+                        <p style="font-size: 13px; color: var(--text-muted);">Thoải mái, không mỏi mắt</p>
+                        <div style="margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap;">
+                            <span class="tag magenta" style="font-size: 11px;">Roboto</span>
+                            <span class="tag magenta" style="font-size: 11px;">Open Sans</span>
+                            <span class="tag magenta" style="font-size: 11px;">Lato</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="section-text animate-in animate-in-delay-2" style="text-align: center; margin-top: 16px;">
+                    💡 Quy tắc: <strong>Heading 24-48px</strong> · Body <strong>16-18px</strong> · Caption
+                    <strong>12-14px</strong>
+                </p>
+            </div>
+        </section>
+
+        <!-- Spacing -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">📐 Spacing & Layout</div>
+                <div class="glass-card animate-in animate-in-delay-1" style="max-width: 600px; width: 100%;">
+                    <div style="border: 2px dashed rgba(0,240,255,0.3); border-radius: 12px; padding: 24px;">
+                        <p style="font-size: 11px; color: var(--accent-blue); margin-bottom: 8px;">↕ Padding (khoảng
+                            cách trong)</p>
+                        <div
+                            style="background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: 8px; padding: 16px; margin-bottom: 12px;">
+                            <p style="font-size: 14px; font-weight: 700;">Nội dung bên trong</p>
+                        </div>
+                        <p style="font-size: 11px; color: var(--accent-blue);">↕ Margin (khoảng cách ngoài)</p>
+                        <div
+                            style="background: var(--bg-secondary); border: 1px solid var(--border-light); border-radius: 8px; padding: 16px;">
+                            <p style="font-size: 14px; font-weight: 700;">Phần tử khác</p>
+                        </div>
+                    </div>
+                    <p style="font-size: 13px; color: var(--text-secondary); text-align: center; margin-top: 16px;">
+                        Spacing đều → Giao diện sạch · Không spacing → Lộn xộn
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompt mẫu -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="section-heading animate-in">✍️ Prompt mẫu chỉnh UI</div>
+                <div style="display: flex; flex-direction: column; gap: 12px; max-width: 700px; width: 100;"
+                    class="animate-in animate-in-delay-1">
+                    <div class="glass-card" style="padding: 16px 24px; border-left: 3px solid var(--accent-blue);">
+                        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">🎨 Đổi màu</p>
+                        <p style="font-size: 14px; font-family: var(--font-mono); color: var(--accent-blue);">"Đổi color
+                            scheme sang dark mode với accent màu tím"</p>
+                    </div>
+                    <div class="glass-card" style="padding: 16px 24px; border-left: 3px solid var(--accent-blue);">
+                        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">📐 Spacing</p>
+                        <p style="font-size: 14px; font-family: var(--font-mono); color: var(--accent-blue);">"Tăng
+                            spacing giữa các section lên gấp đôi"</p>
+                    </div>
+                    <div class="glass-card" style="padding: 16px 24px; border-left: 3px solid var(--accent-blue);">
+                        <p style="font-size: 13px; color: var(--text-muted); margin-bottom: 4px;">🔤 Font</p>
+                        <p style="font-size: 14px; font-family: var(--font-mono); color: var(--accent-blue);">"Dùng
+                            font Poppins cho heading, Inter cho body text"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Closing -->
+        <section class="slide-section">
+            <div class="content-center">
+                <div class="emoji-large animate-in">🎨</div>
+                <div class="closing-message animate-in animate-in-delay-1">
+                    Thay đổi toàn bộ phong cách web<br><span class="highlight">bằng 3 prompt</span>
+                </div>
+                <div class="animate-in animate-in-delay-2" style="margin-top: 24px;">
+                    <span class="tag cyan">→ Chuyển sang Demo</span>
+                </div>
+            </div>
+        </section>
+
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="page-counter"></div>
+        <div class="nav-hint"><span class="key">←</span><span class="key">→</span><span>hoặc click để chuyển</span>
+        </div>
+    </div>
+    <script src="../js/slide-engine.js"></script>
+</body>
+
+</html>
