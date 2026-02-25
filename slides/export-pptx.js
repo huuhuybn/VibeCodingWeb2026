@@ -12,8 +12,9 @@ const fs = require('fs');
 const http = require('http');
 
 // ── Configuration ──
-const SLIDE_WIDTH = 1920;
-const SLIDE_HEIGHT = 1080;
+const SLIDE_WIDTH = 1280;
+const SLIDE_HEIGHT = 720;
+const DEVICE_SCALE = 2; // high-res screenshots
 const ANIMATION_WAIT = 800; // ms to wait for animations
 
 const CHAPTERS = [
@@ -88,7 +89,8 @@ function startServer(rootDir, port) {
         };
 
         const server = http.createServer((req, res) => {
-            let filePath = path.join(rootDir, decodeURIComponent(req.url));
+            let urlPath = decodeURIComponent(req.url).split('?')[0];
+            let filePath = path.join(rootDir, urlPath);
             if (filePath.endsWith(path.sep)) filePath += 'index.html';
 
             const ext = path.extname(filePath).toLowerCase();
@@ -97,10 +99,15 @@ function startServer(rootDir, port) {
             fs.readFile(filePath, (err, data) => {
                 if (err) {
                     res.writeHead(404);
-                    res.end('Not found');
+                    res.end('Not found: ' + filePath);
                     return;
                 }
-                res.writeHead(200, { 'Content-Type': contentType });
+                res.writeHead(200, {
+                    'Content-Type': contentType,
+                    'Cache-Control': 'no-store, no-cache, must-revalidate',
+                    'Pragma': 'no-cache',
+                    'Expires': '0',
+                });
                 res.end(data);
             });
         });
@@ -206,10 +213,12 @@ async function main() {
     const browser = await puppeteer.launch({
         headless: 'new',
         args: ['--no-sandbox', '--disable-setuid-sandbox', '--font-render-hinting=none'],
-        defaultViewport: { width: SLIDE_WIDTH, height: SLIDE_HEIGHT },
+        defaultViewport: { width: SLIDE_WIDTH, height: SLIDE_HEIGHT, deviceScaleFactor: DEVICE_SCALE },
     });
 
     const page = await browser.newPage();
+    // Disable cache to always load latest files
+    await page.setCacheEnabled(false);
 
     try {
         for (const chapter of CHAPTERS) {
